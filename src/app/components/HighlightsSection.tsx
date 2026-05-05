@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { GiMeditation, GiWineGlass } from 'react-icons/gi';
-import { PiCandleFill, PiChatCircleDotsFill } from 'react-icons/pi';
+import { PiCandle, PiChatsCircleFill } from 'react-icons/pi';
 
 interface HighlightCard {
   Icon: React.ComponentType<{ size?: number; style?: React.CSSProperties }>;
@@ -15,7 +15,7 @@ const highlights: HighlightCard[] = [
     description: 'Ground your body and calm your mind with a guided wellness yoga flow.',
   },
   {
-    Icon: PiCandleFill,
+    Icon: PiCandle,
     label: 'Candle Making Experience',
     description: 'Create your own luxury scented candle to take home as a keepsake.',
   },
@@ -25,7 +25,7 @@ const highlights: HighlightCard[] = [
     description: 'Savour carefully curated wines in a warm, intimate setting.',
   },
   {
-    Icon: PiChatCircleDotsFill,
+    Icon: PiChatsCircleFill,
     label: 'Real Conversations & Story Sharing',
     description: 'Connect authentically with like-minded women in a safe, uplifting space.',
   },
