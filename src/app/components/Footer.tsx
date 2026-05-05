@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { MessageCircle, Mail, Instagram, Facebook } from 'lucide-react';
+import { FaWhatsapp, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { HiMail } from 'react-icons/hi';
 
 export function Footer() {
   const ref = useRef<HTMLDivElement>(null);
@@ -48,7 +49,7 @@ export function Footer() {
               className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-200 group-hover:scale-110"
               style={{ background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.35)' }}
             >
-              <MessageCircle size={18} style={{ color: '#C9A84C' }} />
+              <FaWhatsapp size={20} style={{ color: '#C9A84C' }} />
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.15em] mb-0.5" style={{ color: 'rgba(201,168,76,0.6)' }}>
@@ -67,7 +68,7 @@ export function Footer() {
               className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-200 group-hover:scale-110"
               style={{ background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.35)' }}
             >
-              <Mail size={18} style={{ color: '#C9A84C' }} />
+              <HiMail size={20} style={{ color: '#C9A84C' }} />
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.15em] mb-0.5" style={{ color: 'rgba(201,168,76,0.6)' }}>
@@ -80,22 +81,32 @@ export function Footer() {
 
         {/* Social icons */}
         <div className="flex items-center justify-center gap-4 mb-10">
-          {[
-            { Icon: Instagram, label: 'Instagram' },
-            { Icon: Facebook, label: 'Facebook' },
-          ].map(({ Icon, label }) => (
-            <button
-              key={label}
-              aria-label={label}
-              className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
-              style={{
-                background: 'rgba(201,168,76,0.08)',
-                border: '1px solid rgba(201,168,76,0.3)',
-              }}
-            >
-              <Icon size={16} style={{ color: '#C9A84C' }} />
-            </button>
-          ))}
+          <a
+            href="https://instagram.com/candidcandlesandmore"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
+            style={{
+              background: 'rgba(201,168,76,0.08)',
+              border: '1px solid rgba(201,168,76,0.3)',
+            }}
+          >
+            <FaInstagram size={18} style={{ color: '#C9A84C' }} />
+          </a>
+          <a
+            href="https://facebook.com/candidcandlesandmore"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
+            style={{
+              background: 'rgba(201,168,76,0.08)',
+              border: '1px solid rgba(201,168,76,0.3)',
+            }}
+          >
+            <FaFacebookF size={16} style={{ color: '#C9A84C' }} />
+          </a>
         </div>
 
         <div className="gold-divider mb-6" />

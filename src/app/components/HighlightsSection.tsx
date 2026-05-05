@@ -1,29 +1,31 @@
 import { useEffect, useRef } from 'react';
+import { GiMeditation, GiWineGlass } from 'react-icons/gi';
+import { PiCandleFill, PiChatCircleDotsFill } from 'react-icons/pi';
 
 interface HighlightCard {
-  icon: string;
+  Icon: React.ComponentType<{ size?: number; style?: React.CSSProperties }>;
   label: string;
   description: string;
 }
 
 const highlights: HighlightCard[] = [
   {
-    icon: '🧘',
+    Icon: GiMeditation,
     label: 'Yoga Session',
     description: 'Ground your body and calm your mind with a guided wellness yoga flow.',
   },
   {
-    icon: '🕯️',
+    Icon: PiCandleFill,
     label: 'Candle Making Experience',
     description: 'Create your own luxury scented candle to take home as a keepsake.',
   },
   {
-    icon: '🍷',
+    Icon: GiWineGlass,
     label: 'Wine Tasting',
     description: 'Savour carefully curated wines in a warm, intimate setting.',
   },
   {
-    icon: '💬',
+    Icon: PiChatCircleDotsFill,
     label: 'Real Conversations & Story Sharing',
     description: 'Connect authentically with like-minded women in a safe, uplifting space.',
   },
@@ -47,6 +49,8 @@ function HighlightCard({ card, delay }: { card: HighlightCard; delay: number }) 
     return () => observer.disconnect();
   }, [delay]);
 
+  const { Icon } = card;
+  
   return (
     <div
       ref={ref}
@@ -59,14 +63,14 @@ function HighlightCard({ card, delay }: { card: HighlightCard; delay: number }) 
     >
       {/* Icon circle */}
       <div
-        className="w-20 h-20 rounded-full flex items-center justify-center mb-5 text-3xl"
+        className="w-20 h-20 rounded-full flex items-center justify-center mb-5"
         style={{
           background: 'rgba(201,168,76,0.08)',
           border: '1.5px solid rgba(201,168,76,0.5)',
           boxShadow: '0 0 20px rgba(201,168,76,0.15)',
         }}
       >
-        {card.icon}
+        <Icon size={32} style={{ color: '#C9A84C' }} />
       </div>
 
       <h3

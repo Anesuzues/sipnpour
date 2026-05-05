@@ -39,7 +39,7 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
       {/* Brand name */}
       <div ref={ref} className="fade-up relative z-10 max-w-3xl mx-auto">
         <p
-          className="uppercase tracking-[0.3em] text-xs md:text-sm mb-6 font-light"
+          className="uppercase tracking-[0.3em] text-xs md:text-sm mb-8 font-light"
           style={{ color: '#C9A84C', fontFamily: 'Lato, sans-serif' }}
         >
           Candid Candles &amp; More
@@ -47,31 +47,31 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
 
         {/* Main heading */}
         <h1
-          className="font-dancing leading-none mb-4"
+          className="font-dancing leading-none mb-8"
           style={{
-            fontSize: 'clamp(3.5rem, 12vw, 8rem)',
+            fontSize: 'clamp(3.5rem, 12vw, 7rem)',
             background: 'linear-gradient(135deg, #C9A84C 0%, #E2C87A 40%, #C9A84C 70%, #A07830 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-            lineHeight: 1.1,
+            lineHeight: 1.15,
           }}
         >
-          Sip, Pour &amp; Unwind ♡
+          Sip, Pour &amp;<br />Unwind ♡
         </h1>
 
         {/* Divider */}
-        <div className="gold-divider my-6 mx-auto w-48" />
+        <div className="gold-divider my-8 mx-auto w-48" />
 
         {/* Subheading */}
         <p
-          className="uppercase tracking-[0.2em] text-sm md:text-base mb-3 font-light"
+          className="uppercase tracking-[0.25em] text-sm md:text-base mb-2 font-light"
           style={{ color: '#F5E6C8', fontFamily: 'Lato, sans-serif' }}
         >
           A Private Wellness Experience
         </p>
         <p
-          className="font-dancing text-xl md:text-2xl mb-8"
+          className="font-dancing text-xl md:text-2xl mb-10"
           style={{ color: '#C9A84C' }}
         >
           by Candid Candles
@@ -79,11 +79,10 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
 
         {/* Description */}
         <p
-          className="text-sm md:text-base leading-relaxed mb-10 max-w-lg mx-auto font-light"
-          style={{ color: 'rgba(245,230,200,0.7)' }}
+          className="text-sm md:text-base leading-relaxed mb-12 max-w-xl mx-auto font-light"
+          style={{ color: 'rgba(245,230,200,0.65)' }}
         >
-          Join us for an unforgettable afternoon of relaxation, creativity,
-          connection, and wellness.
+          Join us for an unforgettable afternoon of relaxation, creativity, connection, and wellness.
         </p>
 
         {/* CTA button */}
@@ -100,13 +99,6 @@ export function HeroSection({ onBookClick }: HeroSectionProps) {
           Book Your Spot
         </button>
 
-        {/* Tagline */}
-        <p
-          className="font-dancing text-lg mt-10 italic"
-          style={{ color: 'rgba(201,168,76,0.6)' }}
-        >
-          Relax. Create. Connect. Leave Lighter. ♡
-        </p>
       </div>
 
       {/* Scroll indicator */}
